@@ -64,6 +64,8 @@ public class Owner extends Person {
 	@OrderBy("name")
 	private List<Pet> pets = new ArrayList<>();
 
+	private Integer age;
+
 	public String getAddress() {
 		return this.address;
 	}
@@ -141,6 +143,14 @@ public class Owner extends Person {
 			}
 		}
 		return null;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	@Override
