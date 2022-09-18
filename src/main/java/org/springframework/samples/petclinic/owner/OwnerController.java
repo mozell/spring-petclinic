@@ -23,6 +23,7 @@ import javax.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.samples.petclinic.vet.VetRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -47,9 +48,11 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
+	private final VetRepository vetRepository;
 
-	public OwnerController(OwnerRepository clinicService) {
+	public OwnerController(OwnerRepository clinicService, VetRepository vetRepository) {
 		this.owners = clinicService;
+		this.vetRepository = vetRepository;
 	}
 
 	@InitBinder

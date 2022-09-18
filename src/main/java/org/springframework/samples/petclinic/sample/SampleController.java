@@ -2,7 +2,7 @@ package org.springframework.samples.petclinic.sample;
 
 import org.springframework.stereotype.Controller;
 
-@Controller
+//@Controller
 public class SampleController {
 //
 //	SampleRepository sampleRepository;
